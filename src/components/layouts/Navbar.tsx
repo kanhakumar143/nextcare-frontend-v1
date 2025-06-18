@@ -1,43 +1,71 @@
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { NavigationMenu, NavigationMenuItem, NavigationMenuList } from "@/components/ui/navigation-menu";
-import Link from "next/link";
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import {
+  NavigationMenu,
+  NavigationMenuItem,
+  NavigationMenuList,
+} from "@/components/ui/navigation-menu";
+import Link from "next/link";
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+  SheetHeader,
+  SheetTitle,
+} from "@/components/ui/sheet";
+import { Menu } from "lucide-react";
 
 const Navbar = () => {
   return (
-    <nav className="border-gray-200 py-4 flex items-center justify-between mt-10">
+    <nav className=" py-4 flex items-center justify-between pt-8 px-50">
       <Link href="/" className="flex items-center space-x-2">
         <Image
           src="/NavbarLogo.svg"
           alt="Logo"
-          width={92}
-          height={92}
+          width={132}
+          height={132}
           priority
         />
       </Link>
 
-      <NavigationMenu>
-        <NavigationMenuList className="flex space-x-4">
-          <NavigationMenuItem>
-            <Link href="/" className="text-sm font-medium hover:underline">
-              Home
-            </Link>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <Link href="/about" className="text-sm font-medium hover:underline">
-              About
-            </Link>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <Link href="/contact" className="text-sm font-medium hover:underline">
-              Contact
-            </Link>
-          </NavigationMenuItem>
-        </NavigationMenuList>
-      </NavigationMenu>
-
-      <Button variant="outline">Login</Button>
+      {/* <Button variant="outline">Login</Button> */}
+      <Sheet>
+        <SheetTrigger asChild>
+          <Button variant="ghost">
+            <Menu className="w-18 h-18" />
+          </Button>
+        </SheetTrigger>
+        <SheetContent side="right" className="w-[90vw] max-w-md">
+          <SheetHeader>
+            <SheetTitle className="text-lg">Menu</SheetTitle>
+          </SheetHeader>
+          <NavigationMenu className="items-start">
+            <NavigationMenuList className="flex flex-col space-y-4 items-start px-4">
+              <NavigationMenuItem>
+                <Link href="/" className="text-lg font-light hover:underline">
+                  Home
+                </Link>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <Link
+                  href="/about"
+                  className="text-lg font-light hover:underline"
+                >
+                  About
+                </Link>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <Link
+                  href="/contact"
+                  className="text-lg font-light hover:underline"
+                >
+                  Contact
+                </Link>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
+        </SheetContent>
+      </Sheet>
     </nav>
   );
 };
