@@ -37,13 +37,21 @@ const Navbar = () => {
         </SheetTrigger>
         <SheetContent side="right" className="w-[90vw] max-w-md">
           <SheetHeader>
-            <SheetTitle className="text-lg">Menu</SheetTitle>
+            <SheetTitle className="text-lg ml-4">Menu</SheetTitle>
           </SheetHeader>
           <NavigationMenu className="items-start">
-            <NavigationMenuList className="flex flex-col space-y-4 items-start px-4">
+            <NavigationMenuList className="flex flex-col space-y-4 items-start px-4 ml-8">
               <NavigationMenuItem>
                 <Link href="/" className="text-lg font-light hover:underline">
                   Home
+                </Link>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <Link
+                  href="/about"
+                  className="text-lg font-light hover:underline"
+                >
+                  Dashboard
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
@@ -59,7 +67,7 @@ const Navbar = () => {
                   href="/contact"
                   className="text-lg font-light hover:underline"
                 >
-                  Contact
+                  Services
                 </Link>
               </NavigationMenuItem>
             </NavigationMenuList>
