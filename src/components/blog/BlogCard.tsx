@@ -22,19 +22,19 @@ export function BlogCard({category, date, blogHeading, blogDesc, image} : BlogCa
                 alt="CT Scan"
                 width={650}
                 height={390}
-                className="rounded-r-3xl object-cover w-full h-auto"
+                className="rounded-2xl object-cover w-full h-auto"
             />
         </div>
-        <div className="flex flex-col mt-1 p-2">
-            <div className="flex gap-2">
+        <div className="flex flex-col mt-1 md:p-2 p-1">
+            <div className="flex gap-2 items-center">
                 <Badge className="bg-amber-700">{category}</Badge>
-                <p className="text-sm text-gray-600"> {date}</p>
+                <p className="md:text-sm text-xs text-gray-600"> {date}</p>
             </div>
             <div className="mt-3">
-                <p className="text-xl font-semibold">{blogHeading}</p>
+                <p className="md:text-xl text-lg font-semibold">{blogHeading}</p>
             </div>
             <div>
-                <p className="text-gray-500">{blogDesc}</p>
+                <p className="text-gray-500 md:text-md text-sm">{blogDesc}</p>
             </div>
         </div>
         </CardContent>

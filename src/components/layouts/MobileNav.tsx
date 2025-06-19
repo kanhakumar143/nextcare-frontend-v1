@@ -12,9 +12,10 @@ import {
 import { AlignRight } from "lucide-react";
 
 const navList = [
+  { name: "Home", href: "/" },
   { name: "Dashboard", href: "/dashboard" },
   { name: "Appointments", href: "/appointments" },
-  { name: "Blog", href: "/blog" },
+  { name: "Blog", href: "/blogs" },
 ];
 
 const MobileNav = () => {

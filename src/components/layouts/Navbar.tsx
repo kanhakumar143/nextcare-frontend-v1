@@ -6,6 +6,10 @@ import MobileNav from "./MobileNav";
 const Navbar = () => {
   const navList = [
     {
+      name: "Home",
+      href: "/",
+    },
+    {
       name: "Dashboard",
       href: "/dashboard",
     },
@@ -23,12 +27,12 @@ const Navbar = () => {
     },
     {
       name: "Blog",
-      href: "/blog",
+      href: "/blogs",
     },
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 px-8 py-4 flex items-center justify-between backdrop-blur-md bg-white/60 border-b border-white/30 shadow-md text-black">
+    <nav className="fixed top-0 left-0 right-0 z-50 md:px-38 px-8 py-4 flex items-center justify-between backdrop-blur-md bg-white/60 border-b border-white/30 shadow-md text-black">
       <Link href="/" className="flex items-center space-x-2">
         <Image
           src="/NavbarLogo.svg"
