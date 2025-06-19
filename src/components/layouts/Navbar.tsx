@@ -19,11 +19,11 @@ const Navbar = () => {
     },
     {
       name: "Doctors",
-      href: "/doctors",
+      href: "/",
     },
     {
       name: "Departments",
-      href: "/departments",
+      href: "/",
     },
     {
       name: "Blog",
@@ -57,13 +57,13 @@ const Navbar = () => {
 
       <div className="hidden md:flex items-center space-x-6  font-medium">
         <Link
-          href="/services"
+          href="/"
           className="hover:text-primary/60 transition-all duration-150 ease-in-out"
         >
           Services
         </Link>
         <Link
-          href="/help"
+          href="/"
           className="hover:text-primary/60 transition-all duration-150 ease-in-out"
         >
           Help
@@ -76,10 +76,12 @@ const Navbar = () => {
           <Bell size={22} />
         </button>
 
-        {/* Profile */}
-        <button className="text-black hover:text-primary-200 transition">
+        <Link
+          href={"/profile"}
+          className="text-black hover:text-primary-200 transition"
+        >
           <UserCircle2 size={26} />
-        </button>
+        </Link>
 
         {/* CTA Button */}
         <Link
