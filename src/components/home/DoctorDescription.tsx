@@ -1,6 +1,6 @@
 'use client'
 
-import { DoctorCard } from "./components/DoctorCard";
+import  DoctorCard from "./DoctorCard";
 
 export default function DoctorDescription() {
   return (
