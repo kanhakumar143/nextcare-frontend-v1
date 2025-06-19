@@ -14,6 +14,7 @@ import { AlignRight } from "lucide-react";
 const navList = [
   { name: "Home", href: "/" },
   { name: "Dashboard", href: "/dashboard" },
+  { name: "Profile", href: "/profile" },
   { name: "Appointments", href: "/appointments" },
   { name: "Blog", href: "/blogs" },
 ];
