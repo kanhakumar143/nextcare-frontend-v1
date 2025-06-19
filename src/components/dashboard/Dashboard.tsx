@@ -30,8 +30,8 @@ export default function DashboardPage() {
   return (
     <div className="mt-20">
       <h2 className="font-bold text-4xl pb-4">Dashboard</h2>
-      <div className="grid grid-cols-5 gap-x-4">
-        <div className="grid grid-cols-2 col-span-4 gap-x-4 gap-y-4 mb-4">
+      <div className="grid grid-cols-1 md:grid-cols-6 gap-x-4">
+        <div className="grid md:grid-cols-2 md:col-span-4 gap-x-4 gap-y-4 mb-4">
           {/* Health Stats */}
           <Card className="col-span-1 px-5">
             <CardHeader>
@@ -83,7 +83,6 @@ export default function DashboardPage() {
           <Card className="col-span-1">
             <CardHeader className="flex-row items-center justify-between">
               <CardTitle className="text-xl">BMI Calculator</CardTitle>
-              {/* <Button variant="link" className="text-green-500 text-xs px-0">Edit</Button> */}
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="flex items-center justify-between text-sm">
@@ -115,7 +114,7 @@ export default function DashboardPage() {
               </div>
             </CardContent>
           </Card>
-          <Card className="col-span-2 self-start">
+          <Card className="md:col-span-2 self-start">
             <CardHeader className="flex-row justify-between items-center">
               <CardTitle className="text-xl">Fitness Chart</CardTitle>
               <span className="text-green-600 text-sm font-medium">2025</span>
@@ -153,7 +152,7 @@ export default function DashboardPage() {
           </Card>
         </div>
 
-        <div className="col-span-1">
+        <div className="md:col-span-2">
           <Card className="">
             <CardHeader>
               <div className="flex items-center justify-between">
@@ -169,7 +168,7 @@ export default function DashboardPage() {
                 selected={date}
                 onSelect={setDate}
                 required
-                className="border rounded-md"
+                className="border rounded-md w-full"
               />
               <div className="pt-4 space-y-8 text-sm mt-10">
                 <div className="border-l-4 border-amber-400 pl-3">
