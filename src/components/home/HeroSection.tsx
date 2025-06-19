@@ -34,7 +34,7 @@ export default function HeroSection() {
 
           <div className="flex flex-col sm:flex-row items-center gap-4">
             <a href="#" className="font-normal underline text-lg text-gray-900">
-              Find a Specialist
+              Find a Specialist 
             </a>
             <div className="flex -space-x-2">
               {["1", "2", "3"].map((id) => (
