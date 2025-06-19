@@ -38,8 +38,8 @@ export default function ConsultationForm() {
   const [email, setEmail] = useState("");
   const [age, setAge] = useState("");
   const [phone, setPhone] = useState("");
-  const [doctor, setDoctor] = useState("");
-  const [type, setType] = useState("");
+  const [doctor, setDoctor] = useState("Dr. David Janis");
+  const [type, setType] = useState("General");
   const [description, setDescription] = useState("");
 
   const [openDialog, setOpenDialog] = useState(false);
@@ -117,9 +117,9 @@ export default function ConsultationForm() {
             <p className="ml-1 text-gray-500 text-sm mb-2">
               Preferred Doctor (Optional)
             </p>
-            <Select onValueChange={(val) => setDoctor(val)}>
+            <Select onValueChange={(val) => setDoctor(val)} defaultValue="Dr. David Janis">
               <SelectTrigger className="bg-white rounded-sm border-0 shadow-none w-full">
-                <SelectValue placeholder="Dr. David Janis" />
+                <SelectValue placeholder="Dr. David Janis"/>
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="Dr. David Janis">Dr. David Janis</SelectItem>
@@ -131,7 +131,7 @@ export default function ConsultationForm() {
             <p className="ml-1 text-gray-500 text-sm mb-2">Consultation Type</p>
             <Select onValueChange={(val) => setType(val)}>
               <SelectTrigger className="bg-white rounded-sm border-0 shadow-none w-full">
-                <SelectValue placeholder="General" />
+                <SelectValue placeholder="General"/>
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="General">General</SelectItem>
