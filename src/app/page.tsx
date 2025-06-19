@@ -1,4 +1,11 @@
-import { HeroSection, DoctorDescription, Services, DoctorsAndSpecialists, TestimonialCarousel, ConsultationForm } from "@/components/home";
+import {
+  HeroSection,
+  DoctorDescription,
+  Services,
+  DoctorsAndSpecialists,
+  TestimonialCarousel,
+  ConsultationForm,
+} from "@/components/home";
 
 export default function Home() {
   return (

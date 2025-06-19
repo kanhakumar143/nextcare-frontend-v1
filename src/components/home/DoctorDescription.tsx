@@ -1,6 +1,6 @@
-'use client'
+"use client";
 
-import  DoctorCard from "./DoctorCard";
+import DoctorCard from "./DoctorCard";
 
 export default function DoctorDescription() {
   return (
@@ -22,7 +22,10 @@ export default function DoctorDescription() {
 
       <div className="flex justify-center items-center text-center lg:text-left">
         <p className="text-gray-500 font-medium max-w-xl">
-          Experience world-class care tailored to your needs, anytime and anywhere. With trusted specialists and advanced solutions, we bring healthcare closer to you—ensuring convenience and excellence at every step.
+          Experience world-class care tailored to your needs, anytime and
+          anywhere. With trusted specialists and advanced solutions, we bring
+          healthcare closer to you—ensuring convenience and excellence at every
+          step.
         </p>
       </div>
     </section>
