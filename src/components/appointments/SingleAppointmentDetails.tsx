@@ -24,11 +24,13 @@ const SingleAppointmentDetails = ({drName, drDesignation, drAddress, dataAndTime
             height={190}
             className="object-cover"
         />
-        <div>
-            <p className="text-gray-600 font-medium">Name: <span className="text-black font-semibold">{drName}</span></p>
-            <p className="text-sm text-gray-400 font-light">{drDesignation}</p>
-            <p className="text-gray-600 font-medium">Address: <span className="text-black font-semibold">{drAddress}</span></p>
-            <p>Date & Time : {dataAndTime}</p>
+        <div className="flex flex-col justify-between">
+            <div>
+                <p className="text-gray-600 font-medium">Name: <span className="text-black font-semibold">{drName}</span></p>
+                <p className="text-sm text-gray-400 font-light">{drDesignation}</p>
+                <p className="text-gray-600 font-medium">Address: <span className="text-black font-semibold">{drAddress}</span></p>
+            </div>
+            <p className="font-light text-gray-500">Date & Time : {dataAndTime}</p>
         </div>
       </div>
       <div className="flex flex-col gap-2 mt-5 md:mt-0">
