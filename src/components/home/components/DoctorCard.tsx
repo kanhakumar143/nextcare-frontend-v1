@@ -9,9 +9,19 @@ interface DoctorCardProps {
   image?: string;
   cardHeading?: string;
   cardDesc?: string;
+  side?: "left" | "right";
+  cardSubHeading?: string;
 }
 
-export function DoctorCard({ name, specialty, image, cardHeading, cardDesc }: DoctorCardProps) {
+export function DoctorCard({
+  name,
+  specialty,
+  image,
+  cardHeading,
+  cardDesc,
+  side,
+  cardSubHeading,
+}: DoctorCardProps) {
   if (name && image && specialty) {
     return (
       <Card className="w-[300px] h-[220px] rounded-2xl shadow-lg p-6 relative overflow-hidden gap-1">
@@ -51,31 +61,78 @@ export function DoctorCard({ name, specialty, image, cardHeading, cardDesc }: Do
     );
   }
 
-  if (!name && !specialty && image && cardHeading && cardDesc) {
+  if (!name && !specialty && image && cardHeading && cardDesc && !side) {
     return (
-      <div>
-      <Card className="w-full max-w-sm aspect-[16/10] rounded-3xl shadow-lg p-1 relative overflow-hidden">
-        <CardContent className="z-10 p-0 h-full w-full relative">
-          <div className="absolute inset-0">
-            <Image
-              src={image}
-              alt="Doctor image"
-              fill
-              className="object-cover rounded-3xl"
-            />
-          </div>
+      <div className=" flex flex-col items-center justify-center">
+        <Card className="w-full max-w-sm aspect-[16/10] rounded-3xl shadow-lg p-1 relative overflow-hidden">
+          <CardContent className="z-10 p-0 h-full w-full relative">
+            <div className="absolute inset-0">
+              <Image
+                src={image}
+                alt="Doctor image"
+                fill
+                className="object-cover rounded-3xl"
+              />
+            </div>
 
-          <div className="absolute right-4 top-4 bg-black rounded-full p-2 z-20">
-            <ArrowUpRight className="text-white" size={20} />
-          </div>
-
-          
-        </CardContent>
-      </Card>
-      <div className="py-3 px-5">
-        <h3 className="font-semibold text-2xl mt-2">{cardHeading}</h3>
-        <p className="text-gray-500 mt-2">{cardDesc}</p>
+            <div className="absolute right-4 top-4 bg-black rounded-full p-2 z-20">
+              <ArrowUpRight className="text-white" size={20} />
+            </div>
+          </CardContent>
+        </Card>
+        <div className="py-3 px-3 md:px-16">
+          <h3 className="font-semibold text-2xl mt-2">{cardHeading}</h3>
+          <p className="text-gray-500 mt-2">{cardDesc}</p>
+        </div>
       </div>
+    );
+  }
+
+  if (
+    !name &&
+    !specialty &&
+    image &&
+    cardHeading &&
+    cardDesc &&
+    side &&
+    cardSubHeading
+  ) {
+    return (
+      <div className="md:flex md:justify-center md:items-end">
+        {side === "left" && (
+          <div className="py-3 px-3 md:text-right">
+            <h3 className="font-semibold text-2xl mt-2">{cardHeading}</h3>
+            <h4 className="font-medium text-lg text-gray-600">
+              {cardSubHeading}
+            </h4>
+            <p className="text-gray-500 mt-2">{cardDesc}</p>
+          </div>
+        )}
+        <Card className="w-full max-w-sm aspect-[16/10] rounded-3xl shadow-lg p-1 relative overflow-hidden">
+          <CardContent className="z-10 p-0 h-full w-full relative">
+            <div className="absolute inset-0">
+              <Image
+                src={image}
+                alt="Doctor image"
+                fill
+                className="object-cover rounded-3xl"
+              />
+            </div>
+
+            <div className="absolute bottom-4 left-4 bg-black rounded-full p-2 z-20">
+              <ArrowUpRight className="text-white" size={20} />
+            </div>
+          </CardContent>
+        </Card>
+        {side === "right" && (
+          <div className="py-3 px-3">
+            <h3 className="font-semibold text-2xl mt-2">{cardHeading}</h3>
+            <h4 className="font-medium text-lg text-gray-600">
+              {cardSubHeading}
+            </h4>
+            <p className="text-gray-500 mt-2">{cardDesc}</p>
+          </div>
+        )}
       </div>
     );
   }
