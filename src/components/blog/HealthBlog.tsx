@@ -83,7 +83,7 @@ const HealthBlog = () => {
             <div>
               <p className="ml-1 text-gray-500 text-sm mb-2">Category</p>
               <Select>
-                <SelectTrigger className="bg-gray-100 rounded-sm border-0 shadow-none w-full">
+                <SelectTrigger className="bg-gray-100 rounded-sm border-0 shadow-none w-full md:min-h-[48px]">
                   <SelectValue placeholder="BMI" />
                 </SelectTrigger>
                 <SelectContent>
@@ -98,7 +98,7 @@ const HealthBlog = () => {
               <Popover>
                 <PopoverTrigger
                   asChild
-                  className="bg-gray-100 rounded-sm border-0 shadow-none"
+                  className="bg-gray-100 rounded-sm border-0 shadow-none md:min-h-[48px]"
                 >
                   <Button variant="outline" className="w-full text-gray-500">
                     {date ? format(date, "PPP") : "Pick a date"}
@@ -114,11 +114,11 @@ const HealthBlog = () => {
             <p className="ml-1 text-gray-500 text-sm mb-2">Keyword</p>
             <Input
               placeholder="Search"
-              className="bg-gray-100 rounded-sm border-0 shadow-none"
+              className="bg-gray-100 rounded-sm border-0 shadow-none md:min-h-[48px]"
             />
           </div>
-          <div className="md:w-1/4 flex items-end">
-            <Button className="w-full">Search</Button>
+          <div className="md:w-1/4 flex items-end ">
+            <Button className="w-full md:min-h-[48px]">Search</Button>
           </div>
         </div>
       </div>
