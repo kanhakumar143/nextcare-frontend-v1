@@ -133,7 +133,7 @@ export default function DoctorCard({
 
     return (
       <div className="md:flex md:justify-center md:items-end">
-        {isLeft && descriptionBlock}
+        {isLeft ? descriptionBlock : null}
 
         <Card
           className="w-full max-w-sm aspect-[16/10] rounded-3xl shadow-lg p-1 relative overflow-hidden
