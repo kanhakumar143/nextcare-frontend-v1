@@ -16,7 +16,7 @@ export default function HeroSection() {
         </h1>
 
         <div className="mt-8 flex flex-col sm:flex-row sm:items-center gap-6 sm:gap-4 justify-center md:justify-start">
-          <Button className="text-black hover:bg-lime-500 py-7 px-7 font-medium text-md w-full sm:w-auto md:hidden flex">
+          <Button className="text-black hover:bg-lime-500 py-7 px-7 font-medium text-md w-full sm:w-auto">
             Book an Appointment
           </Button>
           <div className="flex flex-col sm:flex-row items-center gap-4">

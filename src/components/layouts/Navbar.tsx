@@ -83,10 +83,10 @@ const Navbar = () => {
 
         {/* CTA Button */}
         <Link
-          href="/book"
-          className="px-4 py-2 rounded-xl bg-primary text-black font-medium hover:bg-primary/70 transition"
+          href="/login"
+          className="px-8 py-3 rounded-xl bg-primary text-black font-normal hover:bg-primary/70 transition"
         >
-          Book Appointment
+          Login
         </Link>
       </div>
 

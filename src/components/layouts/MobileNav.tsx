@@ -42,10 +42,10 @@ const MobileNav = () => {
             ))}
 
             <Link
-              href="/book"
+              href="/login"
               className="mt-3 px-4 py-2 text-center rounded-md bg-primary text-black hover:bg-primary/70 transition"
             >
-              Book Appointment
+              Login
             </Link>
           </div>
         </SheetContent>
